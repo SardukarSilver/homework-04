@@ -61,6 +61,7 @@ a:hover {
   background: transparent;
   border: 0;
   color: #fff;
+  outline: none;
 }
 
 .settings option {
@@ -129,11 +130,101 @@ a:hover {
 }
 
 /*slide-show*/
-.main-slide {
-  margin: 0 auto;
-  height: 475px;
-  /*width: 1100px;*/
-  background: grey;
+.slider .slide {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+.slider .text-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: #fff;
+  width: 480px;
+  margin-left: -480px;
+  transform: translate(0,-50%);
+}
+
+.slider .text-block .title {
+  font-size: 28px;
+  line-height: 47px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.slider .text-block span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 17px;
+  margin-bottom: 3px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider .text-block span:first-child {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  background: #fff;
+  border:0;
+  padding: 0;
+  z-index: 3;
+  cursor: pointer;
+  color: #cdcdcd !important;
+  font-size: 0;
+  text-align: center;
+  line-height: 0;
+  outline: none;
+}
+
+.slick-arrow:hover {
+  opacity: .9;
+}
+
+.slick-arrow.slick-prev {
+  margin-left: -595px;
+  left: 50%;
+}
+
+.slick-arrow.slick-prev::after {
+  content: '\f104';
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 55px;
+  line-height: 67px;
+}
+
+.slick-arrow.slick-next {
+  margin-right: -595px;
+  right: 50%;
+}
+
+.slick-arrow.slick-next::after {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 55px;
+  line-height: 67px;
 }
 
 /*main*/
@@ -149,9 +240,32 @@ a:hover {
 }
 
 .image {
-  padding: 8px;
   height: 228px;
   width: 217px;
   overflow: hidden;
+}
 
+/* side-slider */
+
+.side-slider {
+  float: right;
+  width: 223px;
+  height: 485px;
+  background: red;
+  position: relative;
+}
+
+.side-slide img {
+  padding: 8px 8px;
+}
+
+.side-slide ul {
+  padding: 0;
+  margin: 0;
+}
+
+.side-slider .slick-dots li {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
 }
