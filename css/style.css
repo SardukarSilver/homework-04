@@ -249,23 +249,50 @@ a:hover {
 
 .side-slider {
   float: right;
-  width: 223px;
+  width: 233px;
   height: 485px;
-  background: red;
+  background: #fff;
   position: relative;
+  box-shadow: 0 0 5px rgba(122,122,122,0.5);
+  overflow: hidden;
 }
 
 .side-slide img {
-  padding: 8px 8px;
+  padding: 13px 13px;
+  position: relative;
 }
 
-.side-slide ul {
-  padding: 0;
-  margin: 0;
+.side-slider .slick-dots {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0 0 80px;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(122,122,122,0.5);
 }
 
 .side-slider .slick-dots li {
   display: inline-block;
-  margin: 0 auto;
+  list-style: none;
+}
+
+.side-slider li button {
+  border-radius: 10px;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  background: #7db122;
+  outline: none;
   padding: 0;
+}
+
+
+.side-slider li button:hover {
+	background: #4cb1ca;
+}
+
+.side-slider .slick-active button  {
+  background: #4cb1ca;
 }
