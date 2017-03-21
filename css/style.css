@@ -6,10 +6,11 @@ body {
   background: #fff;
 }
 
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both;
+.clearfix:after,
+.container:after  {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 a {
@@ -30,12 +31,6 @@ a:hover {
 .container {
   margin: 0 auto;
   max-width: 1100px;
-}
-
-.container::after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 #header {
@@ -124,6 +119,10 @@ a:hover {
 }
 
 /*slide-show*/
+
+.slick-slider {
+  margin-bottom: 48px;
+}
 
 .slider .slide {
   position: relative;
@@ -232,15 +231,20 @@ a:hover {
   float: left;
 }
 
+.content {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+}
+
 .prod-list h {
   display: block;
 }
 
 .prod-list {
-  margin: 0;
-  padding: 0;
-  width: 75%;
-  float: left;
+margin: 0;
+padding: 0;
 }
 
 .prod-list li {
@@ -249,8 +253,42 @@ a:hover {
   vertical-align: top;
   box-shadow: 0 0 5px rgba(122,122,122,0.5);
   padding: 8px 8px;
+  margin: 0 28px 25px 0;
+  width: 26%;
+  position: relative;
+}
+
+.prod-list li:nth-child(3n) {
+  margin: 0 0 25px 0;
+  background: red;
+}
+
+.prod-list .image img {
+  width: 100%;
+  height: auto;
+}
+
+.prod-list .desc {
+  width: 100%;
+  position: relative;
+}
+
+.prod-list .text {
+  display: block;
+  width: 77%;
+  float: left;
+}
+
+.prod-list p {
   margin: 0;
-  width: 25%:
+  padding: 0;
+}
+
+.prod-list .text .btn-cart {
+  display: block;
+  float: right;
+  padding: 0;
+  margin: 0;
 }
 
 /*ribons*/
@@ -460,5 +498,5 @@ a:hover {
     width: 44px;
     height: 44px;
   }
-  .sli
+
 }
