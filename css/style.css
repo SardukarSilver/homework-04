@@ -29,7 +29,7 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  width: 1100px;
+  max-width: 1100px;
 }
 
 .container::after {
@@ -73,9 +73,6 @@ a:hover {
     float: right;
 }
 
-/*.top-nav ul {
-
-}*/
 
 .top-nav li {
   display: inline-block;
@@ -93,6 +90,7 @@ a:hover {
   color: #fff;
   padding: 0 15px;
 }
+
 /*main navigation menu*/
 
 .logo  {
@@ -110,10 +108,6 @@ a:hover {
   padding: 44px 114px 0 50px;
 }
 
-/*.main-nav ul {
-
-}*/
-
 .main-nav li {
   display: inline-block;
   padding: 0 10px 0 10px;
@@ -130,6 +124,7 @@ a:hover {
 }
 
 /*slide-show*/
+
 .slider .slide {
   position: relative;
 }
@@ -228,24 +223,119 @@ a:hover {
 }
 
 /*main*/
+
 .main-body {
   position: relative;
 }
-.item {
-  height: 318px;
-  width: 233px;
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(245,245,245,1);
-  -moz-box-shadow: 0px 0px 5px 5px rgba(245,245,245,1);
-  box-shadow: 0px 0px 5px 5px rgba(245,245,245,1);
+
+.item-list {
+  float: left;
 }
 
-.image {
-  height: 228px;
-  width: 217px;
-  overflow: hidden;
+.prod-list h {
+  display: block;
+}
+
+.prod-list {
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  float: left;
+}
+
+.prod-list li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 5px rgba(122,122,122,0.5);
+  padding: 8px 8px;
+  margin: 0;
+  width: 25%:
+}
+
+/*ribons*/
+
+.ribbon {
+	position: absolute;
+	right: -4px;
+	top: -4px;
+	z-index: 2;
+	overflow: hidden;
+	width: 90px; height: 90px;
+	text-align: right;
+}
+.ribbon span {
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 30px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 125px;
+	display: block;
+	background: linear-gradient(#4CB1CA 0%, #4cb1ca 100%);
+	box-shadow:inset -1px -1px 0 1px #2ea0bc;
+	position: absolute;
+	top: 19px;
+	right: -28px;
+}
+.ribbon span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #2ea0bc;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #2ea0bc;
+}
+.ribbon span::after {
+ 	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #2ea0bc;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #2ea0bc;
+}
+.green span {
+	background: linear-gradient(#7DB122 0%, #7db122 100%);
+	box-shadow:inset -1px -1px 0 1px #639015;
+}
+.green span::before {
+	border-left: 3px solid #639015;
+	border-top: 3px solid #639015;
+}
+.green span::after {
+	border-right: 3px solid #639015;
+	border-top: 3px solid #639015;
+}
+.left {
+	left: -4px;
+	top: -4px;
+}
+.left span {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	top: 19px; left: -28px;
+}
+.aside {
+	display: block;
+	float: right;
+	width: 25%;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* side-slider */
+
+.side-bar {
+  float: right;
+  width: 20%;
+}
+
 
 .side-slider {
   float: right;
@@ -295,4 +385,80 @@ a:hover {
 
 .side-slider .slick-active button  {
   background: #4cb1ca;
+}
+
+/*responsive*/
+/*tablets*/
+#header .container {
+  position: relative;
+}
+
+.btn-burger {
+  display: none;
+}
+
+@media screen and (max-width: 1366px) {
+  .slick-arrow.slick-prev {
+    margin: 0;
+    left: 3%;
+  }
+  .slick-arrow.slick-next {
+    margin: 0;
+    right: 3%;
+  }
+  .slider .text-block {
+    margin: 0;
+    left: 12%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 480px;
+    background: #ccc;
+    padding: 20px;
+    z-index: 999;
+    margin-top: 103px;
+    transform: translateX(100%);
+    transition: all .3s ease-in-out;
+  }
+  .open .mobile-nav {
+    transform: translateX(0);
+  }
+
+  .btn-burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50px
+  }
+  .main-nav {
+    padding: 15px 0;
+  }
+  .main-nav,
+  .main-nav-menu,
+  .main-nav-menu ul,
+  .main-nav-menu li
+  .main-nav-menu a {
+    float: none;
+    display: block;
+  }
+  .search{
+    display: block;
+    width: 98%;
+  }
+  .box {
+    min-height: 238px;
+  }
+  .slick-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .sli
 }
