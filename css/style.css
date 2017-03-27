@@ -751,10 +751,7 @@ padding: 0;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.mobile-header {
-		display: block;
-	}
-	.mobile-nav {
+  .mobile-nav {
 		position: fixed;
 		top: 0;
 		bottom: 0;
@@ -763,7 +760,7 @@ padding: 0;
 		background: #4cb1ca;
 		padding: 20px;
 		z-index: 9999;
-		margin: 109px 0 0;
+		margin: 65px 0 0;
 		transform: translateX(100%);
 		transition: all .25s ease-in-out;
 		opacity: 0;
@@ -784,16 +781,47 @@ padding: 0;
 		top: 0;
 		right: 50px;
 	}
+  .mobile-header {
+  display: block;
+  }
+  .settings label {
+    color: #fff;
+  }
+  .settings {
+    float: none;
+    text-align: center;
+    padding: 0;
+  }
+  .top-nav {
+    margin: 0;
+    padding: 0;
+  }
+  .top-nav li {
+    line-height: 0.7;
+  }
+  .top-nav a {
+    padding: 0 6px;
+    color: #fff;
+  }
 	.menu-row {
 		padding: 15px 0;
 	}
-	.main-nav li a,
-	.main-nav li {
+  .main-nav ul {
+    padding: 0;
+  }
+  .main-nav-menu {
+    margin: 0;
+  }
+	.main-nav li ,
+	.main-nav a {
 		display: block;
 		margin: 10px;
     color: #fff;
 	}
-	.menu-right .btn {
+  .menu-right a{
+    color: #fff;
+  }
+  .menu-right .btn {
 		display: inline-block;
 		vertical-align: middle;
 	}
@@ -815,10 +843,7 @@ padding: 0;
 	.slick-arrow.slick-prev {
 		left: 3%;
 	}
-  .top-nav {
-    display: none;
-  }
-  .settings{
+  .top-row {
     display: none;
   }
   .facebook-tab {
@@ -884,7 +909,7 @@ padding: 0;
 		color: #fff;
 	}
   .prod-list li:nth-child(3n) {
-    margin: 0 26px 25px 0;
+    margin: 0 10px 10px 0;
   }
 	.contacb:nth-child(-n+2) {
 		display: none;
